@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libertadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input id="local_digitar" type="text" placeholder="digite o nome do time" list="times">
+    <button onclick="enviar()"><img src="10066683.png" alt="enviar"></button>
+    <datalist id="times">
+        <option value="Peñarol">
+        <option value="Independiente">
+        <option value="Boca Juniors">
+        <option value="Estudiantes">
+        <option value="River Plate">
+        <option value="Nacional">
+        <option value="Olimpia">
+        <option value="São Paulo">
+        <option value="Santos">
+        <option value="Internacional">
+        <option value="Grêmio">
+        <option value="Palmeiras">
+        <option value="Flamengo">
+        <option value="Cruzeiro">
+        <option value="Atlético Nacional">
+        <option value="Racing">
+        <option value="Argentinos Juniors">
+        <option value="Colo Colo">
+        <option value="Vélez Sarsfield">
+        <option value="Vasco da Gama">
+        <option value="Once Caldas">
+        <option value="LDU">
+        <option value="Corinthians">
+        <option value="Atlético-MG">
+        <option value="San Lorenzo">
+        <option value="Fluminense">
+        <option value="Botafogo">
+    </datalist>
+    <div><img id="imagem_libertadores" src="" alt=""></div>
+    <div id="texto_sobre"></div>
+    <script>
+        function enviar(){
+            let ld=document.getElementById('local_digitar').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            let img=document.getElementById('imagem_libertadores')
+            let txt=document.getElementById('texto_sobre')
+            if(ld=="peñarol"){
+                img.src='Penarol_festejo_en_vestuario_libertadores_1987.jpg'
+                txt.innerHTML="O Club Atlético Peñarol, do Uruguai, é um dos clubes mais tradicionais da história da Libertadores.<br><br>🏆 5 títulos da Libertadores <br>▷ 1960<br>▷ 1961<br>▷ 1966<br>▷ 1982<br>▷ 1987"
+            }else if(ld=="independiente"){
+                img.src="gettyimages-2236913726-612x612.jpg"
+                txt.innerHTML="O Club Atlético Independiente, da Argentina, é o maior campeão da história da Libertadores.<br><br>🏆 7 títulos da Libertadores<br>▷ 1964<br>▷ 1965<br>▷ 1972<br>▷ 1973<br>▷ 1974<br>▷ 1975<br>▷ 1984"
+            }else if(ld=='boca juniors'){
+                img.src='GettyImages-1170591242.jpg'
+                txt.innerHTML='O Club Atlético Boca Juniors, da Argentina, é um dos clubes mais importantes e vitoriosos da história da Libertadores.<br><br>🏆 6 títulos da Libertadores<br>▷ 1977<br>▷ 1978<br>▷  2000<br>▷ 2001<br>▷ 2003<br>▷ 2007'
+            }else if(ld=='estudiantes'){
+                img.src='Vuelta_Olìmpica_Libertadores_09_I.jpeg'
+                txt.innerHTML='O Club Estudiantes de La Plata, da Argentina, é um clube histórico e extremamente competitivo na Libertadores.<br><br>🏆 4 títulos da Libertadores<br>▷ 1968<br>▷ 1969<br>▷ 1970<br>▷ 2009'
+            }else if(ld=='river plate'){
+                img.src='gettyimages-1070858370-612x612.jpg'
+                txt.innerHTML='O Club Atlético River Plate, da Argentina, é um dos clubes mais relevantes da história da Libertadores.<br><br>🏆 4 títulos da Libertadores<br>▷ 1986<br>▷ 1996<br>▷ 2015<br>▷ 2018'
+            }else if(ld=='nacional'){
+                img.src="Bandera_del_Club_Nacional_de_Football.png"
+                txt.innerHTML="O Club Nacional de Football, do Uruguai, é um dos clubes mais tradicionais e vitoriosos da história da Libertadores.<br><br>🏆 3 títulos da Libertadores<br>▷ 1971<br>▷ 1980<br>▷ 1988"
+            }else if(ld=='olimpia'){
+                img.src='gettyimages-1251893502-612x612.jpg'
+                txt.innerHTML='O Club Olimpia, do Paraguai, é o clube mais vitorioso do país na história da Libertadores.<br><br>🏆 3 títulos da Libertadores<br>▷ 1979<br>▷ 1990<br>▷ 2002'
+            }else if(ld=='são paulo'){
+                img.src='gettyimages-53239678-612x612.jpg'
+                txt.innerHTML='O São Paulo Futebol Clube é um dos clubes brasileiros mais vitoriosos na história da Libertadores.<br><br>🏆 3 títulos da Libertadores<br>▷ 1992<br>▷ 1993<br>▷ 2005'
+            }else if(ld=='santos'){
+                img.src='GettyImages-135783408-1140x757.webp'
+                txt.innerHTML='O Santos Futebol Clube é um dos clubes mais históricos da Libertadores.<br><br>🏆 3 títulos da Libertadores<br>▷ 1962<br>▷ 1963<br>▷ 2011'
+            }else if(ld=='internacional'){
+                img.src='I0000xYgrnIOqaIo.jpg'
+                txt.innerHTML='O Sport Club Internacional, é um dos clubes brasileiros mais tradicionais da Libertadores.<br><br>🏆 2 títulos da Libertadores<br>▷ 2006<br>▷ 2010'
+            }else if(ld=='grêmio'){
+                img.src='gettyimages-882363442-612x612.jpg'
+                txt.innerHTML='O Grêmio Foot-Ball Porto Alegrense, do Brasil, é um dos clubes brasileiros campeões da Libertadores.<br><br>🏆 3 títulos da Libertadores<br>▷ 1983<br>▷ 1995<br>▷ 2017'
+            }else if(ld=='palmeiras'){
+                img.src='GettyImages-1236851803-1024x683.webp'
+                txt.innerHTML='O Sociedade Esportiva Palmeiras é um dos clubes mais vitoriosos da história recente da Libertadores.<br><br>🏆 3 títulos da Libertadores<br>▷ 1999<br>▷ 2020<br>▷ 2021'
+            }else if(ld=='flamengo'){
+                img.src='gettyimages-2249119398-612x612.jpg'
+                txt.innerHTML='O Clube de Regatas do Flamengo é um dos clubes mais vitoriosos da história recente da Libertadores.<br><br>🏆 4 títulos da Libertadores<br>▷ 1981<br>▷ 2019<br>▷ 2022<br>▷ 2025'
+            }else if(ld=='cruzeiro'){
+                img.src='gettyimages-1185805738-612x612.jpg'
+                txt.innerHTML='O Cruzeiro Esporte Clube é um dos clubes brasileiros campeões da Libertadores.<br><br>🏆 2 títulos da Libertadores<br>▷ 1976<br>▷ 1997'
+            }else if(ld=='atlético nacional'){
+                img.src='gettyimages-583843762-612x612.jpg'
+                txt.innerHTML='O Atlético Nacional, da Colômbia, é o clube mais vitorioso do país na história da Libertadores.<br><br>🏆 2 títulos da Libertadores<br>1989<br>2016'
+            }else if(ld=='racing'){
+                img.src='racinglibertadoresqcgfnuiqxgfkejgnxFJHNŊEXBUNSRFJGRAJCEMSAHJSNMCMGAHXFJKR.jpeg'
+                txt.innerHTML='O Racing Club, da Argentina, é um clube tradicional da competição.<br><br>🏆 1 título da Libertadores<br>▷ 1967'
+            }else if(ld=='argentinos juniors'){
+                img.src='Argentinos_festeja_copa.jpg'
+                txt.innerHTML='O Asociación Atlética Argentinos Juniors, da Argentina, é campeão da Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 1985'
+            }else if(ld=='colo colo'){
+                img.src='4347738620_60a4497dd9_b.jpg'
+                txt.innerHTML='O Club Social y Deportivo Colo-Colo, do Chile, é o único clube chileno campeão da Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 1991'
+            }else if(ld=='vélez sarsfield'){
+                img.src='gettyimages-1642600290-612x612.jpg'
+                txt.innerHTML='O Club Atlético Vélez Sarsfield, da Argentina, é campeão da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 1994'
+            }else if(ld=='vasco da gama'){
+                img.src='gettyimages-1237656392-612x612.jpg'
+                txt.innerHTML='O Club de Regatas Vasco da Gama é campeão da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 1998'
+            }else if(ld=='once caldas'){
+                img.src='gettyimages-51018221-612x612.jpg'
+                txt.innerHTML='O Once Caldas, da Colômbia, é campeão da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 2004'
+            }else if(ld=='ldu'){
+                txt.innerHTML='A Liga Deportiva Universitaria de Quito (LDU), do Equador, é campeã da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 2008'
+                img.src='liga-de-quito-team-group-line-up-liga-de-quito-december-21-2008-football-B7XWW0.jpg'
+            }else if(ld=='corinthians'){
+                img.src='gettyimages-147841390-612x612.jpg'
+                txt.innerHTML='O Sport Club Corinthians Paulista é campeão da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 2012'
+            }else if(ld=='atlético-mg'){
+                img.src='gettyimages-174373250-612x612.jpg'
+                txt.innerHTML='O Clube Atlético Mineiro, do Brasil, é campeão da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 2013'
+            }else if(ld=='san lorenzo'){
+                img.src='gettyimages-453581172-612x612.jpg'
+                txt.innerHTML='O Club Atlético San Lorenzo de Almagro, da Argentina, é campeão da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 2014'
+            }else if(ld=='fluminense'){
+                img.src='gettyimages-1764094629-612x612.jpg'
+                txt.innerHTML='O Fluminense Football Club, do Brasil, é campeão da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 2023'
+            }else if(ld=='botafogo'){
+                img.src='gettyimages-2187090476-612x612.jpg'
+                txt.innerHTML='O Botafogo de Futebol e Regatas, é campeão da Copa Libertadores.<br><br>🏆 1 título da Libertadores<br>▷ 2024'
+            }else{
+                alert('Clube digitado errado ou não está na Lista, tente novamente!')
+            }
+        }
+    </script>
+</body>
+</html>

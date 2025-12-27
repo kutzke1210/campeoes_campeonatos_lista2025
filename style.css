@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  font-family: Arial, sans-serif;
+  color: white;
+}
+#p_{
+    margin-left: 50px;
+}
+#local_digitar{
+    margin-left: 30px;
+    font-size: 30px;
+}
+#imagem_libertadores{
+    margin-left: 50px;
+    margin-top: 60px ;
+}
+#texto_sobre{
+    margin-top: 90px;
+    font-size: 24px;
+    margin-left: 20px;
+}
+#imagem_brasileirao{
+    margin-left: 50px;
+    margin-top: 60px ;
+}
+#ts{
+    margin-top: 90px;
+    font-size: 24px;
+    margin-left: 20px;
+}
+#imagem_cb{
+    margin-left: 50px;
+    margin-top: 60px ;
+}

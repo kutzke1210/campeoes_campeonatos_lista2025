@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brasileirão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input id="local_digitar" type="text" placeholder="digite o nome do time" list="brasileirao">
+    <button onclick="enviar()"><img src="10066683.png" alt="enviar"></button>
+    <datalist id="brasileirao">
+        <option value="Palmeiras"></option>
+        <option value="Santos"></option>
+        <option value="Flamengo"></option>
+        <option value="Corinthians"></option>
+        <option value="São Paulo"></option>
+        <option value="Cruzeiro"></option>
+        <option value="Vasco"></option>
+        <option value="Fluminense"></option>
+        <option value="Internacional"></option>
+        <option value="Atlético-MG"></option>
+        <option value="Botafogo"></option>
+        <option value="Bahia"></option>
+        <option value="Grêmio"></option>
+        <option value="Athletico-PR"></option>
+        <option value="Coritiba"></option>
+        <option value="Guarani"></option>
+        <option value="Sport"></option>
+    </datalist>
+    <div><img id="imagem_brasileirao" src="" alt=""></div>
+    <div id="ts"></div>
+    <script>
+        function enviar(){
+            let br=document.getElementById('local_digitar').value.toLowerCase();
+            let img=document.getElementById('imagem_brasileirao')
+            let txt=document.getElementById('ts') 
+            if(br=='palmeiras'){
+                img.src='AF16-1.jpg'
+                txt.innerHTML='O Palmeiras é o maior campeão da história do Campeonato Brasileiro, com 12 títulos oficiais reconhecidos pela CBF.<br><br>Títulos do Campeonato Brasileiro (12):<br>1960<br>1967 (Taça Brasil)<br>1967 (Roberto Gomes Pedrosa)<br>▷ 1969<br>▷ 1972<br>▷ 1973<br>▷ 1993<br>▷ 1994<br>▷ 2016<br>▷ 2018<br>▷ 2022<br>▷ 2023'
+            }else if(br=='santos'){
+                img.src='gettyimages-497026629-612x612.jpg'
+                txt.innerHTML='O Santos Futebol Clube é um dos clubes mais históricos do futebol brasileiro, conhecido por tradição ofensiva e formação de craques.<br><br>Títulos do Campeonato Brasileiro (8):<br>▷  1961<br>▷ 1962<br>▷ 1963<br>▷ 1964<br>▷ 1965<br>▷ 1968<br>▷ 2002<br>▷ 2004'
+            }else if(br=='flamengo'){
+                img.src='54962794271_2882f349a3_b.jpg'
+                txt.innerHTML='O Flamengo é um dos clubes mais vitoriosos e populares do Brasil, com grande impacto nacional e internacional.<br><br>Títulos do Campeonato Brasileiro (9)<br>▷ 1980<br>▷ 1982<br>▷ 1983<br>▷ 1987<br>▷ 1992<br>▷ 2009<br>▷ 2019<br>▷ 2020<br>▷ 2025'
+            }else if(br=='corinthians'){
+                img.src='corinthians-v-atletico-mg-brasileirao-series-a-2017-scaled.jpg'
+                txt.innerHTML='O Corinthians é um dos clubes mais vitoriosos do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (7):<br>▷ 1990<br>▷ 1998<br>▷ 1999<br>▷ 2005<br>▷ 2011<br>▷ 2015<br>▷ 2017'
+            }else if(br=='são paulo'){
+                img.src='GettyImages-2243318767.jpg.webp'
+                txt.innerHTML='O São Paulo Futebol Clube é um dos clubes mais tradicionais do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (6):<br>▷ 1977<br>▷ 1986<br>▷ 1991<br>▷ 2006<br>▷ 2007<br>▷ 2008'
+            }else if(br=='cruzeiro'){
+                img.src='gettyimages-460112994-612x612.jpg'
+                txt.innerHTML='O Cruzeiro é um dos clubes mais tradicionais do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (4):<br>▷ 1966<br>▷ 2003<br>▷ 2013<br>▷ 2014'
+            }else if(br=='vasco'){
+                img.src='palmeires-v-vasco-x.jpg'
+                txt.innerHTML='O Vasco da Gama é um dos clubes mais tradicionais do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (4):<br>▷ 1974<br>▷ 1989<br>▷ 1997<br>▷ 2000'
+            }else if(br=='fluminense'){
+                img.src='gettyimages-107352422-612x612.jpg'
+                txt.innerHTML='O Fluminense é um dos clubes mais tradicionais do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (4):<br>▷ 1970<br>▷ 1984<br>▷ 2010<br>▷ 2012'
+            }else if(br=='internacional'){
+                img.src='Paulo_Roberto_Falcão_com_a_taça_de_campeão_brasileiro_pelo_Internacional_em_1979.jpg'
+                txt.innerHTML='O Internacional é um dos clubes mais respeitados do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (3):<br>▷ 1975<br>▷ 1976<br>▷ 1979 (invicto)'
+            }else if(br=='atlético-mg'){
+                img.src='gettyimages-1237039473-612x612.jpg'
+                txt.innerHTML='O Atlético-MG é um dos clubes mais tradicionais do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (3):<br>▷ 1937 (Torneio dos Campeões da FBF, reconhecido pela CBF)<br>▷ 1971<br>▷ 2021'
+            }else if(br=='botafogo'){
+                img.src='GettyImages-2188920721.webp'
+                txt.innerHTML='O Botafogo é um clube histórico do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (3):<br>▷ 1968<br>▷ 1995<br>▷ 2024'
+            }else if(br=='Bahia'){
+                txt.innerHTML='O Bahia é um dos clubes mais tradicionais do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (2):<br>▷ 1959 (Taça Brasil)<br>▷ 1988'
+            }else if(br=='grêmio'){
+                img.src='j cfrvnfjkeg,rcjfmjhcten,jgckmvh,cksjfdhdjkmamkhx,kjhgnkkxmjhcsmgkjmfhs,dgnhvcjtm.jpeg'
+                txt.innerHTML='O Grêmio é um clube tradicional do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (2):<br>▷ 1981<br>▷ 1996'
+            }else if(br=='athletico-pr'){
+                img.src='gettyimages-2152645079-612x612.jpg'
+                txt.innerHTML='O Athletico-PR é um clube tradicional do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (1):<br>▷ 2001'
+            }else if(br=='coritiba'){
+                img.src='4546715136_254bbec395_z.jpg'
+                txt.innerHTML='O Coritiba é um clube tradicional do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (1):<br>▷ 1985'
+            }else if(br=='guarani'){
+                img.src='Guarani_1978.jpg'
+                txt.innerHTML='O Guarani Futebol Clube é um clube tradicional do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (1):<br>▷ 1978'
+            }else if(br=='sport'){
+                img.src='33285245524_1c5be969c6_c.jpg'
+                txt.innerHTML='O Sport Club do Recife é um clube tradicional do futebol brasileiro.<br><br>Títulos do Campeonato Brasileiro (1):<br>▷ 1987 (reconhecido pela CBF)'}else{
+                alert('Clube digitado errado ou não está na Lista, tente novamente!')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copa do Brasil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input id="local_digitar" type="text" placeholder="digite o nome do time" list="cp">
+    <button onclick="enviar()"><img src="10066683.png" alt="enviar"></button>
+    <datalist id="cp">
+        <option value="Cruzeiro"></option>
+        <option value="Grêmio"></option>
+        <option value="Flamengo"></option>
+        <option value="Palmeiras"></option>
+        <option value="Corinthians"></option>
+        <option value="Atlético-MG"></option>
+        <option value="Criciúma"></option>
+        <option value="Fluminense"></option>
+        <option value="Inter"></option>
+        <option value="Juventude"></option>
+        <option value="Paulista"></option>
+        <option value="Santo André"></option>
+        <option value="Santos"></option>
+        <option value="Sport"></option>
+        <option value="Vasco"></option>
+        <option value="Athletico-PR"></option>
+        <option value="São Paulo"></option>
+    </datalist>
+    <div><img id="imagem_cb" src="" alt=""></div>
+    <div id="ts"></div>
+    <script>
+        let clubes={
+            "cruzeiro":{
+                img:'gettyimages-854926832-612x612.jpg',
+                txt:'O Cruzeiro é o maior campeão da Copa do Brasil.<br><br>Títulos (6):<br>▷ 1993<br>▷ 1996<br>▷ 2000<br>▷ 2003<br>▷ 2017<br>▷ 2018'
+            },
+            "grêmio":{
+                img:'r43hudischuSNHVCX.jpeg',
+                txt:'O Grêmio é um dos clubes mais tradicionais da Copa do Brasil.<br><br>Títulos (5):<br>▷ 1989<br>▷ 1994<br>▷ 1997<br>▷ 2001<br>▷ 2016'
+            },
+            "flamengo":{
+                img:'gettyimages-2183457058-612x612.jpg',
+                txt:'O Flamengo é um dos clubes de maior peso na Copa do Brasil.<br><br>Títulos (4):<br>▷ 1990<br>▷ 2006<br>▷ 2013<br>▷ 2022'
+            },
+            "palmeiras": {
+                img:'gettyimages-499672938-612x612.jpg',
+                txt:'O Palmeiras é um clube de forte presença na Copa do Brasil.<br><br>Títulos (4):<br>▷ 1998<br>▷ 2012<br>▷ 2015<br>▷ 2020'
+            },
+            "corinthians":{
+                img:'019b294e-5bf8-7080-b845-35e28f951d41.jpg',
+                txt:'O Corinthians é um dos clubes mais vencedores da Copa do Brasil.<br><br>Títulos (4):<br>▷ 1995<br>▷ 2002<br>▷ 2009<br>▷ 2025'
+            },
+            "atlético-mg":{
+                img:'gettyimages-459628422-612x612.jpg',
+                txt:'O Atlético-MG tem histórico relevante na Copa do Brasil.<br><br>Títulos (2):<br>▷ 2014<br>▷ 2021'
+            },
+            'criciúma':{
+                img:'shutterstock_2242068891-scaled.jpg',
+                txt:'O Criciúma tem um título histórico na Copa do Brasil.<br><br>Títulos (1):<br>▷ 1991'
+            },
+            'fluminense':{
+                img:'GettyImages-80495895.webp',
+                txt:'O Fluminense tem 1 título da Copa do Brasil.<br><br>Títulos (1):<br>▷ 2007'
+            },
+            'inter':{
+                img:'inter-x-maracana-scaled.jpg',
+                txt:'O Internacional tem 1 título da Copa do Brasil.<br><br>Títulos (1):<br>▷ 1992'
+            },
+            'juventude':{
+                img:'8497998.jpg',
+                txt:'O Juventude tem 1 título da Copa do Brasil.<br>Títulos (1):<br>▷ 1999'
+            },
+            'paulista':{
+                img:'173239965367425225b5c57_1732399653_3x2_md.jpg',
+                txt:'O Paulista Futebol Clube, de Jundiaí, tem 1 título da Copa do Brasil.<br><br>Títulos (1):<br>▷ 2005'
+            },
+            'santo andré':{
+                img:'tbjv skngvmc,ennf vnfd gjmv,nvn347859729792374775927120110013763745310.jpg',
+                txt:'O Esporte Clube Santo André entrou para a história do futebol brasileiro ao conquistar a Copa do Brasil de 2004, superando clubes de maior expressão nacional.<br><br>Títulos (1):<br>▷ 2004'
+            },
+            'santos':{
+                img:'4861591835_30180a1627_b.jpg',
+                txt:'O Santos Futebol Clube conquistou a Copa do Brasil uma vez, em uma campanha marcante na era moderna do clube.<br><br>Títulos (1):<br>▷ 2010'
+            },
+            'sport':{
+                img:'Sport_Club_do_Recife.png',
+                txt:'O Sport Club do Recife conquistou a Copa do Brasil em 2008, em uma campanha histórica para o futebol nordestino.<br><br>Títulos (1):<br>▷ 2008'
+            },
+            'vasco':{
+                img:'5895517581_184eeb23fa_b.jpg',
+                txt:'O Club de Regatas Vasco da Gama conquistou a Copa do Brasil em 2011, com uma campanha sólida em jogos de mata-mata.<br><br>Títulos (1):<br>▷ 2011'
+            },
+            'athletico-pr':{
+                img:'12352199.jpg',
+                txt:'O Athletico Paranaense é um dos clubes mais fortes em competições de mata-mata no Brasil.<br><br>Títulos (1):<br>▷ 2019'
+            },
+            'são paulo':{
+                img:'São_Paulo_campeão_da_Copa_do_Brasil_2023.png',
+                txt:'O São Paulo Futebol Clube conquistou seu primeiro título da competição recentemente.<br><br><br><br>Títulos (1):<br>▷ 2023'
+            }
+
+
+        }
+        function enviar(){
+            let nome=document.getElementById('local_digitar').value.toLowerCase();
+            let img=document.getElementById('imagem_cb')
+            let txt=document.getElementById('ts')
+            if (clubes[nome]){
+                img.src=clubes[nome].img;
+                txt.innerHTML=clubes[nome].txt
+            }else{
+                alert('Clube digitado errado ou não está na Lista, tente novamente!')
+            }
+        }
+    </script>
+</body>
+</html>
