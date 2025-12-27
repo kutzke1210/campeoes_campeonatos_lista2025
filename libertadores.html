@@ -42,7 +42,7 @@
     <div id="texto_sobre"></div>
     <script>
         function enviar(){
-            let ld=document.getElementById('local_digitar').value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            let ld=document.getElementById('local_digitar').value.toLowerCase();
             let img=document.getElementById('imagem_libertadores')
             let txt=document.getElementById('texto_sobre')
             if(ld=="peñarol"){
